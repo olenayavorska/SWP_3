@@ -1,0 +1,39 @@
+<nz-layout>
+  <ul nz-menu nzTheme="light" nzMode="horizontal">
+    <li nz-submenu nzIcon="book" nzTitle="Books">
+      <ul>
+        <li nz-menu-item [routerLink]="['/book/view']" routerLinkActive="router-link-active">All</li>
+        <li nz-menu-item [routerLink]="['/book/create']">Add</li>
+        <li nz-menu-item [routerLink]="['/book/cards']">Cards</li>
+      </ul>
+    </li>
+    <li nz-submenu nzIcon="shopping-cart" nzTitle="Cart">
+      <ul>
+        <li nz-menu-item [routerLink]="['/cart/view']" routerLinkActive="router-link-active">
+          Cart
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu nzIcon="shop" nzTitle="Orders">
+      <ul>
+        <li nz-menu-item [routerLink]="['/cart/order']" routerLinkActive="router-link-active">
+          Orders
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu nzIcon="login" nzTitle="Sign Up/Sign In">
+      <ul>
+        <li nz-menu-item [routerLink]="['/auth/create']" routerLinkActive="router-link-active">
+          Sign Up/Sign In
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <nz-layout>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
